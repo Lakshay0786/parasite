@@ -1,0 +1,705 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600;800&display=swap');
+
+:root {
+  --live-indicator-shadow: hsla(0, 79%, 63%, 0.5);
+  --rich-black-fogra-30: hsl(219, 32%, 10%);
+  --rich-black-fogra-29: hsl(222, 25%, 10%);
+  --live-indicator: hsl(0, 79%, 63%);
+  --oxford-blue-50: hsla(218, 39%, 14%, 0.8);
+  --oxford-blue: hsl(218, 39%, 14%);
+  --light-azure: hsl(214, 84%, 56%);
+  --off-white: hsl(0, 0%, 88%);
+  --yellow: hsl(45, 100%, 54%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  transition: all 0.5s ease;
+}
+
+$azure: hsl(211, 100%, 50%);
+$rich-black-fogra-30: hsl(219, 32%, 10%);
+
+body {
+  background-color: $rich-black-fogra-30;
+  width: 85%;
+  font-family: 'Poppins', sans-serif;
+  margin: 0% auto;
+}
+
+
+.Main-container {
+  width: 90%;
+  margin: auto;
+  margin-top: 4rem;
+  border-radius: 20px;
+  overflow: hidden;
+
+  transition: all ease-in-out 0.2s;
+  background-color: whitesmoke;
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-size: 110%;
+  // background-size: cover;
+  position: relative;
+  background-position: center;
+  // background: linear-gradient(0, 0, 0, 0.1);
+
+  .movie-container {
+    height: 90%;
+    width: 60%;
+    display: flex;
+
+    .movie-info {
+      width: 60%;
+      position: absolute;
+      top: 20%;
+      left: 6%;
+
+      h1 {
+        font-size: 2rem;
+        color: white;
+        font-weight: 800;
+      }
+
+      p {
+        font-size: 1rem;
+        width: 90%;
+        // font-weight: 200;
+        font-weight: 300;
+        color: white;
+      }
+    }
+  }
+}
+
+.Main-container:hover {
+  // transform: scale3d(1.2);
+  transition: all ease-in-out 0.5s;
+  background-size: 115%;
+}
+
+.poster-img {
+  width: 12rem;
+  position: absolute;
+  right: 10rem;
+  top: 6rem;
+}
+
+
+/* CSS */
+.button-52 {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  // outline: 0;
+  margin-top: 2rem;
+  color: white;
+  font-weight: bold;
+  border: 1px solid white;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all ease-in-out 0.2s;
+}
+
+.button-52:hover {
+  transform: scale(1.1);
+
+  // background-color: white;
+}
+
+//Searchfeed ----------------------------------
+
+
+.searchfeed {
+  color: white;
+  margin-top: 10rem;
+  // height: 500px;
+}
+
+.nav {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selection {
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  background: transparent;
+  color: white;
+  border: 1px solid blue;
+  border-radius: 10px;
+}
+
+.selection:hover {
+  background-color: $azure;
+}
+
+.selection:active {
+  background-color: white;
+  color: black;
+}
+
+.searchtitle {
+  font-size: 2rem;
+}
+
+.searchbar-div {
+
+
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchbar {
+  width: 80%;
+  padding: 10px 30px;
+
+  margin-right: 30px;
+  border: none;
+  border-radius: 50px;
+}
+
+.searchbar:active {
+  border: none;
+}
+
+.searchicon:hover {
+  transform: scale(1.1);
+  color: red;
+}
+
+.moviesCard-div {
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  overflow: hidden;
+
+  img {
+    border-radius: 10px;
+  }
+
+  .Card {
+    margin: 10px;
+    flex: 1;
+  }
+}
+
+.navBar {
+  height: 100px;
+  // background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .logo {
+    position: sticky;
+    margin-top: 20px;
+    height: 150px;
+  }
+}
+
+.SearchCard {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  margin: 10px;
+
+  .card-img {
+    width: fit-content;
+  }
+
+  .card-title {
+    position: relative;
+    transform: translateY(+20px);
+    width: 70%;
+  }
+}
+
+// Series 
+
+.tvshowtitle {
+  font-size: 3rem;
+  color: white;
+}
+
+.SeriesCard-div {
+
+  display: flex;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  color: white;
+  // height: 400px;
+  // background-color: aqua;
+
+
+  .TopSeriesSingleCard {
+    margin-top: 20px;
+    flex: 1;
+    margin-right: 20px;
+    // overflow: hidden;
+    // width: 100%;
+
+    .series-img {
+      border-radius: 20px;
+      height: 300px;
+
+    }
+
+    span {
+      font-size: 14px;
+    }
+  }
+
+
+}
+
+.TopSeriesSingleCard:hover {
+  transform: translateY(-10px);
+}
+
+//footer
+.footer-div {
+  height: 20vh;
+  padding-bottom: 50px;
+  width: 80%;
+  margin: auto;
+
+  .foot-container {
+    color: white;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    div {
+      width: 25%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .button-52 {
+    padding: 13px 50px 13px;
+  }
+}
+
+.prev {
+  position: absolute;
+  top: 49%;
+  left: 1%;
+  filter: invert(1);
+}
+
+.ford {
+  position: absolute;
+  top: 49%;
+  right: 1%;
+  filter: invert(1);
+}
+
+.ford:hover,
+.prev:hover {
+  transform: scale(1.2);
+}
+
+.logo-div {
+  // height: 10%;
+  width: 60%;
+
+  .logoImg {
+    width: 30%;
+  }
+}
+
+.Card-div {
+  display: flex;
+  width: 100%;
+  // overflow: hidden;
+  overflow-x: scroll;
+  // flex-wrap: nowrap;
+}
+
+.card-img {
+  height: 150px;
+  margin-right: 10px;
+  margin-top: 20px;
+  opacity: 0.7;
+}
+
+.Card {
+  position: relative;
+}
+
+.card-title {
+  // transform: translateY(-10px);
+  color: white;
+  position: absolute;
+  left: 10px;
+  bottom: 15px;
+  font-weight: 600;
+  font-size: 12px;
+
+}
+
+.card-img:hover {
+  transform: translateY(-10px);
+
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+@media only screen and (max-width: 1335px) {
+  .Main-container {
+    background-size: 120%;
+  }
+
+  .Main-container:hover {
+    background-size: 125%;
+  }
+
+  .movie-info {
+
+    h1 {
+      font-size: 1.2rem !important;
+      color: white;
+      font-weight: 800;
+    }
+
+  }
+
+  .movie-details {
+    // background-color: wheat;
+    width: 40%;
+    font-size: 0.8rem !important;
+
+  }
+
+  .poster-img {
+    width: 10rem;
+    position: absolute;
+    right: 8rem;
+    top: 6rem;
+  }
+
+  .footer-div {
+    width: 100%;
+    height: 10vh;
+    font-size: 12px;
+
+    .foot-container {
+      width: 100%;
+
+      div {
+        width: 40%;
+        font-size: 12px;
+
+        span {
+          margin-right: 1px;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media only screen and (max-width: 1219px) {
+  .Main-container {
+    background-size: 160%;
+
+  }
+
+  .poster-img {
+    width: 10rem;
+    position: absolute;
+    right: 6rem;
+    top: 6rem;
+  }
+
+  .tvshowtitle {
+    font-size: 2.5rem;
+    color: white;
+  }
+
+
+
+  .Main-container:hover {
+    background-size: 165%;
+  }
+
+  .footer-div {
+    width: 100%;
+    height: 10vh;
+    font-size: 14px;
+
+    .foot-container {
+      width: 100%;
+
+      div {
+        width: 40%;
+        font-size: 12px;
+
+        span {
+          margin-right: 1px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .Main-container {
+    background-size: 200%;
+  }
+
+  .Main-container:hover {
+    background-size: 205%;
+  }
+
+  .poster-img {
+    width: 10rem;
+    position: absolute;
+    right: 4rem;
+    top: 8rem;
+  }
+
+  .card-img {
+    height: 100px;
+    margin-right: 10px;
+    margin-top: 20px;
+    opacity: 0.7;
+  }
+
+  .footer-div {
+    width: 100%;
+    height: 10vh;
+    font-size: 12px;
+
+    .foot-container {
+      width: 100%;
+
+      div {
+        width: 40%;
+        font-size: 12px;
+
+        span {
+          margin-right: 1px;
+        }
+      }
+    }
+  }
+
+  .SeriesCard-div {
+
+    font-size: 12px;
+
+    .TopSeriesSingleCard {
+      width: 20vw;
+
+      .series-img {
+        border-radius: 20px;
+        height: 200px;
+
+      }
+
+      span {
+        font-size: 10px;
+
+      }
+    }
+
+  }
+}
+
+@media only screen and (max-width: 740px) {
+  .Main-container {
+    background-size: cover;
+  }
+
+  .Main-container:hover {
+    background-size: cover;
+  }
+
+  .tvshowtitle {
+    font-size: 1.8rem;
+    color: white;
+  }
+
+  .footer-div {
+    width: 100%;
+    height: 10vh;
+    font-size: 12px;
+
+    .foot-container {
+      width: 100%;
+
+      div {
+        width: 60%;
+        font-size: 11px;
+
+        span {
+          margin-right: 1px;
+        }
+      }
+    }
+  }
+
+  .SeriesCard-div {
+
+    font-size: 12px;
+
+    .TopSeriesSingleCard {
+      // width: 15vw;
+
+      .series-img {
+        border-radius: 20px;
+        height: 140px;
+
+      }
+
+      span {
+        font-size: 10px;
+
+      }
+    }
+
+  }
+
+  .searchtitle {
+    font-size: 1.2rem;
+    margin: auto;
+    width: 50%;
+    // transform: translateY(-80px);
+    position: absolute;
+    left: 6rem;
+    bottom: -2rem;
+
+  }
+
+  .selection {
+    width: 30%;
+  }
+
+  .searchbar-div {
+    width: 50%;
+    position: relative;
+  }
+
+  .searchbar {
+    width: 90%;
+  }
+
+  .searchbar:active {
+    border: none;
+  }
+
+  .searchicon:hover {
+    transform: scale(1.1);
+    color: red;
+  }
+
+
+
+
+
+  .moviesCard-div {
+
+    .SearchCard {
+      // border: 1px solid yellow;
+      flex: 1;
+      // width: ;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        font-weight: 300;
+        width: 100px;
+        font-size: 10px;
+
+      }
+
+
+
+      img {
+        border-radius: 10px;
+        width: 100%;
+        // width: auto;
+      }
+    }
+  }
+
+
+
+  .movie-poster {
+    display: none;
+  }
+
+  .Main-container {
+    // position: relative;
+
+    // width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .movie-container {
+    width: 85% !important;
+    // border: 1px solid yellow;
+    position: relative;
+
+    .movie-info {
+      position: absolute;
+      // height: 80%;
+      text-align: center;
+      width: 90% !important;
+      // border: 1px solid wheat;
+
+      .movie-details {
+        width: 100% !important;
+      }
+
+      .button-52 {
+        margin: 0px auto;
+        // position: relative;
+        // transform: translateX(50%);
+        margin-top: 20px;
+
+      }
+
+      .logo-div {
+        // border: 1px solid blue;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        height: 8vh;
+        // padding: 10px;
+        margin-bottom: 10%;
+
+        img {
+          width: auto;
+          height: 60px;
+        }
+      }
+    }
+  }
+
+
+}
